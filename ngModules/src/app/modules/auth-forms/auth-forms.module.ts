@@ -26,4 +26,4 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthService
   ]
 })
-export class AuthFromsModule { }
+export class AuthFormsModule { }
