@@ -3,13 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 
 //Listamos Providers de manera compartida
 const providers: [] = [];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    HomePageComponent,
+    SettingsPageComponent
   ],
   imports: [
     BrowserModule,

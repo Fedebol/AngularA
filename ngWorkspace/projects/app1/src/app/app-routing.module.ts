@@ -6,7 +6,7 @@ import { SettingsPageComponent } from './pages/settings-page/settings-page.compo
 const routes: Routes = [
   {
     path: 'app1',
-    redirectTo: 'home'
+    redirectTo: 'app1/home'
   },
   {
     path: 'app1/home',
