@@ -1,4 +1,5 @@
-import { of, Observable, fromEvent } from "rxjs";
+import { of, Observable, fromEvent, interval } from "rxjs";
+import { take } from 'rxjs/operators';
 
 
 // ****   Ejemplo 1   **** uso basico de un observable y un observer
@@ -45,4 +46,20 @@ export const miObservableDeString = (...args: string[]): Observable<string> => {
    //   error: ((error: any) => console.log(`Ha ocurrido un error: ${error}`)),
    //   complete: (() => console.info('Terminado observable escucha click'))
    // })
+
+// **** Ejemplo 4 **** observable a aprtir de intervalo con pipe y take
+
+// 1. definimos observable a partir de un intervalo que emite cada 2 segundos
+const observable = interval(2000)
+
+//2. creamos el observer que consuma los valores,
+// pero solo se quede con los 3 primeros
+
+observable.pipe(
+  take(3)
+).subscribe({
+  next: ((valor:number) => console.log(`Valor: ${valor}`)),
+  error: ((error: any) => console.error(`algo paso....: ${error}`)),
+  complete: (() => console.info('Obtener los tres primeros valores del intervalo'))
+})
 
