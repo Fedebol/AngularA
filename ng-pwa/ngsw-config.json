@@ -26,5 +26,19 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "Chistes_chuck_norris",
+      "urls": [
+        "https://api.chucknorris.io/jokes/random"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "1h",
+        "maxSize": 20,
+        "timeout": "4s"
+      }
+    }
   ]
 }
